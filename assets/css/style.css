@@ -1,0 +1,693 @@
+/* ===== Reset & Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #24332f;
+    background-color: #f3f7f4;
+    line-height: 1.5;
+}
+
+a {
+    color: #176b5b;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Header & Navbar (Flexbox) ===== */
+header {
+    background-color: #176b5b;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav a {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* ===== Main Layout ===== */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.welcome {
+    background: #7ac7a8;
+    background: linear-gradient(90deg, rgba(122, 199, 168, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    height: 150px;
+}
+
+.section-title {
+    margin-bottom: 1rem;
+    color: #176b5b;
+}
+
+/* ===== Kartu Statistik (CSS Grid) ===== */
+.section-title > section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.section-title > section article {
+    background-color: #e4f1eb;
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.section-title > section article h3 {
+    font-size: 0.95rem;
+    color: #60756e;
+    margin-bottom: 0.5rem;
+}
+
+.section-title > section article p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #176b5b;
+}
+
+/* ===== Grafik Statistik ===== */
+.sales-dashboard {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.sales-chart,
+.best-selling {
+    background-color: #fff;
+    border: 1px solid #d5e1dc;
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.panel-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    color: #176b5b;
+}
+
+.panel-heading h2 {
+    color: #837d7d;
+    font-size: 1.15rem;
+}
+
+.panel-subheading {
+    color: #e41212;
+    font-size: 0.78rem;
+    margin-bottom: 0.2rem;
+}
+
+.panel-eyebrow {
+    color: #60756e;
+    font-size: 0.78rem;
+    margin-bottom: 0.2rem;
+}
+
+.panel-period {
+    background-color: #e4f1eb;
+    border-radius: 4px;
+    color: #000000;
+    font-size: 0.78rem;
+    padding: 0.35rem 0.55rem;
+    white-space: nowrap;
+}
+
+.bar-chart {
+    align-items: flex-end;
+    border-bottom: 1px solid #09d781;
+    display: flex;
+    gap: 0.75rem;
+    height: 220px;
+    justify-content: space-around;
+    padding: 0 0.5rem;
+}
+
+.chart-column {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    min-width: 0;
+}
+
+.chart-value,
+.chart-label {
+    color: #60756e;
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+.chart-value {
+    margin-bottom: 0.35rem;
+}
+
+.chart-bar {
+    background-color: #7ac7a8;
+    border-radius: 4px 4px 0 0;
+    min-height: 20px;
+    width: min(100px, 70%);
+}
+
+.chart-label {
+    margin-top: 0.5rem;
+}
+
+.product-list {
+    display: grid;
+    gap: 1.1rem;
+}
+
+.product-meta {
+    align-items: center;
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: 1.5rem 1fr auto;
+    margin-bottom: 0.4rem;
+}
+
+.product-meta span,
+.product-meta b {
+    color: #71827c;
+    font-size: 0.75rem;
+}
+
+.product-meta strong {
+    color: #24332f;
+    font-size: 0.9rem;
+}
+
+.product-track {
+    background-color: #e4f1eb;
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.product-track span {
+    background-color: #d18b36;
+    border-radius: inherit;
+    display: block;
+    height: 100%;
+}
+
+/* ===== Tabel ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid #d5e1dc;
+}
+
+thead {
+    background-color: #176b5b;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fbf9;
+}
+
+tbody tr:hover {
+    background-color: #e4f1eb;
+}
+
+/* ===== Tombol Aksi Tabel ===== */
+td button,
+.btn-edit,
+.btn-hapus {
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.35rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.btn-edit {
+    background-color: #d18b36;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-edit:hover {
+    background-color: #b8792c;
+    text-decoration: none;
+}
+
+.btn-hapus {
+    background-color: #c4514b;
+    color: #fff;
+}
+
+.btn-hapus:hover {
+    background-color: #a8403a;
+}
+
+/* Form hapus inline di tabel */
+.form-hapus {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Flash Message ===== */
+.flash {
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.flash-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flash-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ===== Pencarian ===== */
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box form {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.search-box form span {
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-box form input[type="text"] {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #c6d8d0;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.search-box form button {
+    background-color: #176b5b;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.search-box form button:hover {
+    background-color: #0f5145;
+}
+
+/* ===== Pagination ===== */
+.pagination {
+    display: flex;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.pagination a {
+    background-color: #e4f1eb;
+    border-radius: 4px;
+    color: #176b5b;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.pagination a.active,
+.pagination a:hover {
+    background-color: #176b5b;
+    color: #fff;
+}
+
+/* ===== Validasi JS error ===== */
+span.error {
+    color: #c4514b;
+    font-size: 0.82rem;
+    display: block;
+    margin-top: 0.2rem;
+}
+
+/* ===== Form ===== */
+form p {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: #3c514a;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #c6d8d0;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.tambah-buku {
+    background-color: #fff;
+    border: 1px solid #d5e1dc;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(23, 107, 91, 0.06);
+    margin: 0 auto;
+    max-width: 560px;
+    padding: 1.5rem;
+}
+
+.tambah-buku h2 {
+    color: #176b5b;
+    margin-bottom: 0.35rem;
+}
+
+.form-intro {
+    color: #71827c;
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+}
+
+.required-mark {
+    color: #c4514b;
+}
+
+.form-note {
+    color: #71827c;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+form button[type="submit"] {
+    background-color: #176b5b;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0f5145;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1.25rem;
+    color: #71827c;
+    font-size: 0.9rem;
+}
+
+/* ===== Tabel Responsif ===== */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.product-table-wrapper {
+    background-color: #fff;
+    border: 1px solid #d5e1dc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(23, 107, 91, 0.08);
+    overflow: hidden;
+}
+
+.product-table {
+    border-collapse: collapse;
+}
+
+.product-table thead th {
+    padding: 0.8rem 0.75rem;
+}
+
+.product-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== Hamburger Menu (checkbox hack) ===== */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* ===== Dashboard Sidebar ===== */
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.dashboard-layout .sidebar {
+    background-color: #176b5b;
+    color: #fff;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    min-height: 100vh;
+    padding: 1.5rem 1rem;
+}
+
+.sidebar h1 {
+    font-size: 1.2rem;
+    margin: 0 0 2rem;
+    padding: 0 0.5rem;
+}
+
+.sidebar nav ul {
+    display: grid;
+    gap: 0.45rem;
+    list-style: none;
+}
+
+.sidebar nav a {
+    border-radius: 6px;
+    color: #fff;
+    display: block;
+    padding: 0.7rem 0.75rem;
+}
+
+.sidebar nav a:hover,
+.sidebar nav li:first-child a {
+    background-color: #0f5145;
+    text-decoration: none;
+}
+
+.dashboard-layout .dashboard-header {
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #d5e1dc;
+    color: #24332f;
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: flex-end;
+    min-height: 74px;
+    padding: 1rem 2rem;
+}
+
+.mobile-header-brand {
+    display: none;
+}
+
+.user-profile {
+    align-items: center;
+    display: flex;
+    gap: 0.7rem;
+}
+
+.user-profile strong,
+.user-profile span {
+    display: block;
+}
+
+.user-profile strong {
+    font-size: 0.9rem;
+}
+
+.user-profile span {
+    color: #71827c;
+    font-size: 0.78rem;
+}
+
+.user-avatar {
+    align-items: center;
+    background-color: #e4f1eb;
+    border-radius: 50%;
+    color: #176b5b;
+    display: flex;
+    font-weight: 700;
+    height: 38px;
+    justify-content: center;
+    width: 38px;
+}
+
+.dashboard-layout main {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+}
+
+.dashboard-layout footer {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablet ke bawah */
+@media (max-width: 768px) {
+    .section-title > section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sales-dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .dashboard-layout {
+        display: block;
+    }
+
+    .dashboard-layout .sidebar {
+        display: none;
+        min-height: auto;
+    }
+
+    .dashboard-layout .dashboard-header {
+        justify-content: space-between;
+        padding: 0.85rem 1rem;
+    }
+
+    .mobile-header-brand {
+        align-items: center;
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    .mobile-header-brand span {
+        color: #176b5b;
+        font-size: 0.95rem;
+        font-weight: 600;
+    }
+
+    .dashboard-layout .nav-toggle-label {
+        background-color: #176b5b;
+        border-radius: 4px;
+        display: block;
+        line-height: 1;
+        padding: 0.35rem 0.5rem;
+    }
+
+    .dashboard-layout .nav-toggle:checked ~ .dashboard-header .nav-toggle-label {
+        background-color: #0f5145;
+    }
+
+    .dashboard-layout .nav-toggle:checked ~ .sidebar {
+        display: block;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 1rem;
+    }
+
+    .nav-toggle:checked ~ nav {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .section-title > section {
+        grid-template-columns: 1fr;
+    }
+
+    form input,
+    form select {
+        max-width: 100%;
+    }
+}

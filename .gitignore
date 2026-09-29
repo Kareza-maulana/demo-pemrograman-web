@@ -1,0 +1,17 @@
+# Ignore environment files dengan kredensial sensitif
+.env
+
+# Docker & IDE
+.dockerignore
+.vscode/
+.idea/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*~
